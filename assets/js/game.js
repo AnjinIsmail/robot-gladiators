@@ -4,19 +4,19 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Andriod", "Robo Trumble"];
+
+
+var fight = function(enemyName) {
+    // window.alert ("Welcome to Robot Gladiators!"); 
+
+
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function() {
-    //alert users that they are starting the round
-    window.alert ("Welcome to Robot Gladiators!"); }
-var promptFight = window. prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
-//substract the value of "playerAttack"from the value of "enemyHealth'" and use the result to update the value in the 'enemyHealth' varaible
-    // enemyHealth = enemyHealth - playerAttack; }
-    // log a resulting message to the console so we know that it workd.
 
-// if player choses to fight, then fight
+var promptFight = window. prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
+
 
 if (promptFight === "fight" || promptFight === "FIGHT") {
  //Rremove enemy's health by subtracting the amount set in the playerattack varialbe
@@ -56,11 +56,27 @@ else {
     }
   //IF NO (false) , ask question again by running fight() again 
   else {
-      fight()
+    fight()
+
   }
 } else {
     window.alert(" You need to a pick a valid option. Try again!");
 }
+}
+
+
+
+
+for (var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i])
+}
+
+
+
+
+
+
+
 
 
 
