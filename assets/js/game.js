@@ -22,26 +22,26 @@ var fightOrSkip = function () {
       );
       //subtract money from playerMoney for skipping
       playerInfo.playerMoney = playerInfo.money - 10;
-      //return turn if user wants to leave 
-    
-      
-    //  shop();
-     return true;
+      //return turn if user wants to leave
+
+      //  shop();
+      return true;
     }
   }
 };
 
 var fight = function (enemy) {
-  while (playerInfo.health > 0 && enemy.health>0) {
-    //ask user if they'd liked to fight or skip using fightOrSkip function 
-    if (fightOrSkip());{
+  while (playerInfo.health > 0 && enemy.health > 0) {
+    //ask user if they'd liked to fight or skip using fightOrSkip function
+    if (fightOrSkip());
+    {
       //if true, leave fight by breaking loop
-      break
-    };
+      break;
+    }
   }
-    var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
-  
-  var promptFight= window.prompt (
+  var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
+
+  var promptFight = window.prompt(
     ' Would you like FIGHT or SKIP this battle? Enter "FIGHT" or SKIP" to choose'
   );
 
@@ -58,10 +58,8 @@ var fight = function (enemy) {
       playerInfo.money = Math.max(0, playerInfo.money - 10);
       console.log("playerInfo.money", playerInfo.money);
       // break;
-      }
     }
-
-  
+  }
 
   //remove enemy's health by subtracting the amount set in the playerInfo.attack variable
   // if (promptFight === "fight" || promptFight === "FIGHT") {
@@ -117,7 +115,7 @@ var fight = function (enemy) {
       playerInfo.name + " still has " + playerInfo.health + " health left."
     );
   }
-}; 
+};
 
 // else {
 //     window.alert(" You need to a pick a valid option. Try again!");
@@ -151,26 +149,25 @@ var startGame = function () {
           "The fight is over, visit the store before the next round "
         );
 
+        var shopOptionPrompt= window.prompt(
+          "Would you like to 'REFILL', your health, 'UPGRADE', your attack, or 'LEAVE' to make a choice.");
         //if yes, take them to the store() function
         if (storeConfirm) {
           // shop();
           // console.log (window.shopOptionPrompt);
-          switch (shop()) {
-            case "REFILL": // new case
-            case "refill":
+          switch (shopOptionPrompt()) {
+            case 1:
               playerInfo.refillHealth();
               break;
-            case "UPGRADE": // new case
-            case "upgrade":
+
+            case 2:
               playerInfo.upgradeAttack();
               break;
 
-            case "LEAVE": // new case
-            case "leave":
+            case 3:
               window.alert("Leaving the store.");
-
-              //do nothing, so function will end
               break;
+
             default:
               window.alert("You did not pick a valid option. Try again.");
 
@@ -296,5 +293,4 @@ var enemyInfo = [
     health: randomNumber(40, 60),
   },
 ];
-
 startGame();
