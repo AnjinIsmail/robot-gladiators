@@ -1,6 +1,6 @@
 # Robot-Gladiators
 
-##Description ##
+## Description ##
 Overall purpose is for the User to play Robot-Gladiators via prompt. The game will prompt the user to name their robot and the game begins!
 
 1- Player starts with money, HP, and attack values
@@ -38,3 +38,9 @@ Overall purpose is for the User to play Robot-Gladiators via prompt. The game wi
 Deployed application : https://anjinismail.github.io/robot-gladiators/.
 
 Screenshot :
+<img src = "https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot1.png">
+<img src = "https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot2.png">
+<img src = "https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot3.png">
+<img src ="https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot4.png" >
+<img src = "https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot5.png" >
+<img src ="https://github.com/AnjinIsmail/robot-gladiators/blob/master/img/screenshot6.png" >
